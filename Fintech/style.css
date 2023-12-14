@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #001f3f, #3498db);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 1em;
+}
+
+.titulo {
+    font-size: 1em;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.mensagem {
+    color: #555;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.form {
+    background-color: rgba(173, 216, 230, 0.9);
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0.25em 1.25em rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0.625em);
+    border: 0.125em solid #3498db;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form:hover {
+    border: 0.125em solid #3498db;
+    box-shadow: 0 0 1.25em rgba(52, 152, 219, 0.7);
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+.form label {
+    color: #555;
+}
+
+.form label input {
+    width: 100%;
+    padding: 1em;
+    outline: none;
+    border: 0.0625em solid #ddd;
+    border-radius: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.form label input + span {
+    position: absolute;
+    left: 1em;
+    top: 1.25em;
+    color: #555;
+    font-size: 0.9em;
+    cursor: text;
+    transition: top 0.3s, font-size 0.3s;
+}
+
+.form label input:placeholder-shown + span {
+    top: 1.25em;
+    font-size: 0.9em;
+}
+
+.form label input:focus,
+.form label input:valid {
+    border-color: #3498db;
+}
+
+.form label input:focus + span,
+.form label input:valid + span {
+    top: 2.5em;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: #3498db;
+}
+
+.form label .icon {
+    right: 1em;
+    color: #3498db;
+}
+
+.confirme {
+    background: #27ae60;
+    border: none;
+    outline: none;
+    padding: 1.25em;
+    border-radius: 1em;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.confirme:hover {
+    background: #219653;
+}
+
+@media only screen and (max-width: 600px) {
+    .titulo {
+        font-size: 1em;
+    }
+
+    .mensagem {
+        font-size: 0.75em;
+    }
+
+    .form label input {
+        padding: 0.625em;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .titulo {
+        font-size: 0.9em;
+    }
+
+    .mensagem {
+        font-size: 0.625em;
+    }
+
+    .form label input {
+        padding: 0.375em;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .titulo {
+        font-size: 0.8em;
+    }
+
+    .mensagem {
+        font-size: 0.625em;
+    }
+
+    .form label input {
+        padding: 0.375em;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .titulo {
+        font-size: 0.875em;
+    }
+
+    .mensagem {
+        font-size: 0.625em;
+    }
+
+    .form label input {
+        padding: 0.375em;
+    }
+}
